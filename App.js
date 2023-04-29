@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Pedometer } from 'expo-sensors';
-import { Text } from 'react-native-rapi-ui';
+import { Text } from 'react-native';
 
 export default function App() {
   const [isPedometerAvailable, setIsPedometerAvailable] = useState('checking');
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text size="h1" style={{borderWidth: '2'}}>{pastStepCount}</Text>
+      <Text style={{borderWidth: '2', fontSize: 30, borderRadius: 9,}}>{pastStepCount}</Text>
        <Text size="h3" style={{borderWidth: '0'}}>(In the last 24hrs)</Text>
     </View>
   );
@@ -44,9 +44,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 15,
+    marginTop: 150,
+    marginBottom: 150,
+    marginLeft: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#9987',
+    backgroundColor: '#0083ff',
+    width: 200,
+    height: 10,
+    borderRadius: 9,
+    shadow: 4,
   },
 });
